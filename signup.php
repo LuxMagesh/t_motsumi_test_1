@@ -1,10 +1,10 @@
 <?php
-
 $message_id_already_exists = '';
 $message_successfully_inserted_into_db = '';
 $message_idnumber_thirteen_digits = '';
 $message_idnumber_numeric = '';
 $message_not_birthday = "";
+$message_countdown = "";
 if ( isset( $_POST['submit'] ) )
 {
 
@@ -35,14 +35,18 @@ if ( isset( $_POST['submit'] ) )
   
       if ( $id_year < 1 || $id_year > 2022) {
         $errors = true;
-        header( "refresh:5;url=/reg.php" );
+        $message_not_birthday = "<center><h1 class='white-text card'>Sorry...Based on ID Number you provided , The Year Does Not Match the Date of Birth!!!</h1></center>";
+        print_r($message_not_birthday);
+        header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
         exit();
       }else {
         echo "Year: " . $id_year . "<br>";
       } 
       if ( $id_month < 1 || $id_month > 12) {
         $errors = true;
-        header( "refresh:5;url=/reg.php" );
+        $message_not_birthday = "<center><h1 class='white-text card'>Sorry...Based on ID Number you provided , The Month Does Not Match the Date of Birth!!!</h1></center>";
+        print_r($message_not_birthday);
+        header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
         exit();
       }else {
         echo "Month: " . $id_month . "<br>";
@@ -50,7 +54,7 @@ if ( isset( $_POST['submit'] ) )
   
       if ( $id_day < 1 || $id_day > 31) {
         $errors = true;
-        header( "refresh:5;url=/reg.php" );
+        header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
         exit();
       }else {
         echo "Day: " . $id_day . "<br>";
@@ -67,6 +71,8 @@ if ( isset( $_POST['submit'] ) )
      {
       $message_not_birthday = "<center><h1 class='white-text card'>Sorry...ID NUmber Provided , Does Not Match the Date of Birth you entered on the system !!!</h1></center>";
       print_r($message_not_birthday);
+      header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
+      exit();
      }else{
       $errors = false;
       require 'dbcon.php';
@@ -74,21 +80,26 @@ if ( isset( $_POST['submit'] ) )
       $result=mysqli_query($conn,$sqlcheck);
       if(mysqli_num_rows($result) >= 1)
       {
+        
           $message_id_already_exists = "<center><h1 class='white-text card'>Sorry...ID NUmber Provided Already Exists On the System!!!</h1></center>";
           print_r($message_id_already_exists);
+          header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
+          exit();
       }
           else{
 
             /**********************************************************************
                 Inserting the Correct Date to the Database, After Various Checks
             ***********************************************************************/ 
-            
+
               $sql="INSERT INTO `users`(`f_name`,`l_name`,`id_num`,`reg_date`) 
               VALUES ('$fname','$lname','$idnumber','$finalYear')";
               
               if ($conn->query($sql) === TRUE) {
                 $message_id_already_exists = "<center><h1 class='white-text card'>New record created successfully Created!!!</h1></center>";
                 print_r($message_id_already_exists);
+                header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
+                exit();
               } else {
                 echo "Error: " . $sql . "<br>" . $conn->error;
               } 
@@ -101,6 +112,8 @@ if ( isset( $_POST['submit'] ) )
             ***********************************************************************/ 
         $message_idnumber_thirteen_digits = "<center><h1 class='white-text card'>Sign Up Failed Either Because ==> 1 = Contains Non Numerical Characters || 2 = Not a Valid ID Number !!! Enter a Valid Record to Succeed </h1></center>";
         print_r($message_idnumber_thirteen_digits);
+        header( "refresh:15;url=/dev-prox/t_motsumi_test_1/reg.php" );
+        exit();
       }
 
 } ?>
