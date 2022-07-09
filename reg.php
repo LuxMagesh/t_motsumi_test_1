@@ -29,12 +29,12 @@
                                 <span id="c2" class="glyphicon glyphicon-envelope"></span>
                             </div>
                             <div class="txt1">
-                                <input type="text" name="id_num" value="" id="id_num" placeholder="   ID Number"/>
-                                <span id="c3" class="glyphicon glyphicon-envelope"></span>
-                            </div>
-                            <div class="txt1">
                                 <input type="text" name="reg_date" id="reg_date" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="    Date of Birth">
                                 <span id="c4" class="glyphicon glyphicon-envelope"></span>
+                            </div>
+                            <div class="txt1">
+                                <input type="text" name="id_num" value="" id="id_num" placeholder="   ID Number"/>
+                                <span id="c3" class="glyphicon glyphicon-envelope"></span>
                             </div>
                             <div class="ckbox">
                                     <!-- <input type="checkbox" name="ck1" id="ckbox1"/> -->
