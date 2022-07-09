@@ -7,8 +7,8 @@
 body{
     /* background-image: url("./img/pexels-energepiccom-561458.jpg"); */
     /* background-image: url("./img/pexels-nout-gons-378570.jpg"); */
-    background-image: url("./img/pexels-burst-374018.jpg");
-    /* background-image: url("./img/pexels-energepiccom-561458.jpg"); */
+    /* background-image: url("./img/pexels-burst-374018.jpg"); */
+    background-image: url("./img/pexels-energepiccom-561458.jpg");
     background-size: cover;
 }
 
@@ -21,16 +21,16 @@ body{
 }
 
 .inner{
-    width: 30vw;
-    height: 60vh;
+    width: 32vw;
+    height: 80vh;
     background-color:#b2b2b2 ;
     border-radius: 10px;
     opacity: 0.8;
 }
 
 .title{
-    width:30vw;
-    height: 12vh;
+    width:32vw;
+    height: 8vh;
     display: flex;
     align-items: center;
     background-color:darkslategray;
@@ -52,9 +52,9 @@ body{
 .txt{
     background-color: #fffefe;
     margin-top: 5%;
-    margin-left: 8%;
-    width: 25vw;
-    border-radius: 25px;
+    margin-left: 6%;
+    width: 28vw;
+    border-radius: 28px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -62,9 +62,9 @@ body{
 .txt1{
     background-color: #fffefe;
     margin-top: 1%;
-    margin-left: 8%;
-    width: 25vw;
-    border-radius: 25px;
+    margin-left: 6%;
+    width: 28vw;
+    border-radius: 28px;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -78,15 +78,18 @@ body{
 }
 
 .content input{
-    width: 22vw;
+    width: 26vw;
+    border-radius: 26px;
     padding-top: 2%;
     padding-bottom: 2%;
     border: 0;
+    border-color: darkslategray;
 }
 
 .content input[placeborder]{
     font-size: 1.3em;
-    border-radius: 25px;
+    /* width: 28vw;
+    border-radius: 28px; */
     padding-left: 5%;
     padding-right: 5%;
     
@@ -95,11 +98,12 @@ body{
 
 .ckbox{
     /* font-size: medium; */
-    margin-top: 8%;
+    /* margin-top: 1%; */
     padding-left: 2%;
     padding-right: 2%;
-    margin-left: 8%;
-    width: 25vw;
+    width: 28vw;
+    /* justify-content: center;
+    align-items: center; */
 
 }
 
