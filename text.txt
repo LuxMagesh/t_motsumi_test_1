@@ -1,0 +1,12 @@
+  <div class="ckbox">
+                                    <div>
+                                        <input type="checkbox" name="ck1" id="ckbox1" placeholder="Firstname"/>
+                                        <span>I agree to the Term and Service</span>
+
+                                        <input type="checkbox" name="ck2" id="ckbox2" placeholder="Lastname"/>
+                                        <span>I want to recieve news and special offers</span>
+                                    </div>
+                            </div>
+                            <div class="btnsub">
+                                    <input type="submit" name="submit" id="btnsub" value="Register"/>
+                            </div>
